@@ -28,3 +28,26 @@ function Student(name, age, cursosAprobados) {
       "Curso de Creación de amor",
     ],
   );
+
+  class Student2{
+    constructor({
+      name,
+      age,
+      cursosAprobados,
+      email
+    }){
+      this.name = name;
+      this.age = age;
+      this.email = email;
+      this.cursosAprobados = cursosAprobados;
+    }
+    aprobarCurso(nuevoCursito){
+      this.cursosAprobados.push(nuevoCursito);
+    }
+  }
+  const waltercito = new Student2({
+    name:"Waltercito",
+    age:29,
+    cursosAprobados: ["Curso del POO", "Curso Practico POO"]
+  }  
+  )
