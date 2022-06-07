@@ -51,6 +51,43 @@ function Student(name, age, cursosAprobados) {
     cursosAprobados: ["Curso del POO", "Curso Practico POO"]
   }  
   )
+  class LearningPath {
+    constructor({
+      name,
+      courses = [],
+    }) {
+      this.name = name;
+      this.courses = courses;
+    }
+  }
+  
+  const escuelaWeb = new LearningPath({
+    name: "Escuela de Desarrollo Web",
+    courses: [
+      cursoProgBasica,
+      cursoDefinitivoHTML,
+      cursoPracticoHTML,
+    ],
+  });
+  
+  const escuelaData = new LearningPath({
+    name: "Escuela de Data Science",
+    courses: [
+      cursoProgBasica,
+      "Curso DataBusiness",
+      "Curso Dataviz",
+    ],
+  });
+  
+  const escuelaVgs = new LearningPath({
+    name: "Escuela de Vidweojuegos",
+    courses: [
+      cursoProgBasica,
+      "Curso de Unity",
+      "Curso de Unreal",
+    ],
+  })
+  
   class Student {
     constructor({
       name,
