@@ -125,3 +125,24 @@ function Student(name, age, cursosAprobados) {
     email: "miguelito@juanito.com",
     instagram: "migelito_feliz"
   });
+  class Course {
+    constructor({
+      name,
+      classes = [],
+    }) {
+      this._name = name;
+      this.classes = classes;
+    }
+  
+    get name() {
+      return this._name;
+    }
+  
+    set name(nuevoNombrecito) {
+      if (nuevoNombrecito === "Curso Malito de Programación Básica") {
+        console.error("Web... no");
+      } else {
+        this._name = nuevoNombrecito; 
+      }
+    }
+  }
